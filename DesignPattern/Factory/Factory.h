@@ -48,4 +48,4 @@ public:
 protected:
 private:
 };
-#endif //~_FACTORY_H
+#endif //_FACTORY_H_
