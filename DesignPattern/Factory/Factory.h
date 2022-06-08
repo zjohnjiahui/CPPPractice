@@ -2,31 +2,31 @@
 #define _FACTORY_H_
 
 /*
-¹¤³§Ä£Ê½µÄ×÷ÓÃ£º
-1.Ìá¹©´´½¨¶ÔÏóµÄ½Ó¿Ú
-2.½«¶ÔÏóµÄÊµÀý»¯ÑÓ³Ùµ½×ÓÀàÖÐÊµÏÖ
+å·¥åŽ‚æ¨¡å¼çš„ä½œç”¨ï¼š
+1.æä¾›åˆ›å»ºå¯¹è±¡çš„æŽ¥å£
+2.å°†å¯¹è±¡çš„å®žä¾‹åŒ–å»¶è¿Ÿåˆ°å­ç±»ä¸­å®žçŽ°
 
-Òª½â¾öµÄÎÊÌâ£º
-1.Ò»¸ö»ùÀàÖ¸ÕëÖ¸Ïò×ÓÀà¶ÔÏó£¬ÓÐÐí¶à×ÓÀà£¬ÐèÒªÖªµÀÊµ¼Ê×ÓÀàÃû³Æ²ÅÄÜ½øÐÐnew
-2.ÔÚÒ»¸öÀàAÖÐÊ¹ÓÃB, AB¾ùÎª³éÏó»ùÀà, Èç¹ûÐèÒªAÀ´´´½¨BµÄ×ÓÀà¶ÔÏó£¬
-  ÄÇÃ´¾Í²»ÖªµÀ¸Ã´´½¨Ê²Ã´¶ÔÏó£¬ÕâÊ±¿ÉÒÔ´«Èë¹¤³§¶ÔÏóÀ´´´½¨
-  Èç¹û²»ÐèÒªÖ±½Ó´´½¨µÄ»°£¬Ò²¿ÉÖ±½Ó´«ÈëBµÄ×ÓÀà¶ÔÏó¡£
+è¦è§£å†³çš„é—®é¢˜ï¼š
+1.ä¸€ä¸ªåŸºç±»æŒ‡é’ˆæŒ‡å‘å­ç±»å¯¹è±¡ï¼ŒåŸºç±»å­˜åœ¨è®¸å¤šå­ç±»ï¼Œåˆ›å»ºå­ç±»æ—¶éœ€è¦çŸ¥é“å®žé™…å­ç±»åç§°æ‰èƒ½è¿›è¡Œnew
+2.åœ¨ä¸€ä¸ªç±»Aä¸­ä½¿ç”¨B, ABå‡ä¸ºæŠ½è±¡åŸºç±», å¦‚æžœéœ€è¦Aæ¥åˆ›å»ºBçš„å­ç±»å¯¹è±¡ï¼Œ
+  é‚£ä¹ˆå°±ä¸çŸ¥é“è¯¥åˆ›å»ºä»€ä¹ˆå¯¹è±¡ï¼Œè¿™æ—¶å¯ä»¥ä¼ å…¥å·¥åŽ‚å¯¹è±¡æ¥åˆ›å»º
+  å¦‚æžœä¸éœ€è¦ç›´æŽ¥åˆ›å»ºçš„è¯ï¼Œä¹Ÿå¯ç›´æŽ¥ä¼ å…¥Bçš„å­ç±»å¯¹è±¡ã€‚
 
-Çé¿ö1£º
-Ã¿¸öProduct»ùÀà¶ÔÓ¦Ò»ÖÖFactory,ÔÚFactoryÖÐÊµÏÖËùÓÐ¾ßÌåProductµÄ´´½¨º¯Êý¡£
-È±µã£ºFactoryÀàÓÀÔ¶²»¿ÉÄÜ·â±Õ
+æƒ…å†µ1ï¼š
+æ¯ä¸ªProductåŸºç±»å¯¹åº”ä¸€ç§Factory,åœ¨Factoryä¸­å®žçŽ°æ‰€æœ‰å…·ä½“Productçš„åˆ›å»ºå‡½æ•°ã€‚
+ç¼ºç‚¹ï¼šFactoryç±»æ°¸è¿œä¸å¯èƒ½å°é—­
 
-Çé¿ö2£º
-Ã¿¸öProduct»ùÀà¶ÔÓ¦Ò»ÖÖFactory,Ã¿¸ö¾ßÌåProduct¶ÔÓ¦Ò»¸ö¾ßÌåFactory¡£
-ÓÉ¾ßÌåFactory´´½¨¾ßÌåProduct¡£
-È±µã£ºÒÔ¶àÌ¬µÄ·½Ê½£¬ÒÔÌí¼ÓÒ»¸ö×ÓÀàµÄ·½Ê½ÊµÏÖ·â±Õ¡£
+æƒ…å†µ2ï¼š
+æ¯ä¸ªProductåŸºç±»å¯¹åº”ä¸€ç§Factory,æ¯ä¸ªå…·ä½“Productå¯¹åº”ä¸€ä¸ªå…·ä½“Factoryã€‚
+ç”±å…·ä½“Factoryåˆ›å»ºå…·ä½“Productã€‚
+ç¼ºç‚¹ï¼šä»¥å¤šæ€çš„æ–¹å¼ï¼Œä»¥æ·»åŠ ä¸€ä¸ªå­ç±»çš„æ–¹å¼å®žçŽ°å°é—­ã€‚
 
-ÌÖÂÛ£º²ÎÊý»¯¹¤³§,Ä£°å¹¤³§
+è®¨è®ºï¼šå‚æ•°åŒ–å·¥åŽ‚,æ¨¡æ¿å·¥åŽ‚
 */
 
 class Product;
 
-//¹¤³§»ùÀà Óë Product»ùÀàÏà¶ÔÓ¦
+//å·¥åŽ‚åŸºç±» ä¸Ž ProductåŸºç±»ç›¸å¯¹åº”
 class Factory
 {
 public:
@@ -37,7 +37,7 @@ protected:
 private:
 };
 
-//¾ßÌå¹¤³§  Óë  ¾ßÌå²úÆ·Ïà¶ÔÓ¦
+//å…·ä½“å·¥åŽ‚  ä¸Ž  å…·ä½“äº§å“ç›¸å¯¹åº”
 class ConcreteFactory :public Factory
 {
 public:
