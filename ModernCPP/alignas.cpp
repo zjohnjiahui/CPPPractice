@@ -1,5 +1,9 @@
 #include <iostream>
 
+//refer:
+// https://blog.csdn.net/jlusuoya/article/details/77331914
+// https://interviewguide.cn/notes/03-hunting_job/02-interview/01-01-01-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html
+
 // 定义：结构体成员根据一定内存大小进行对齐，
 //      当前对齐内存块不足以容纳下一个成员时
 //      从下一个对齐内存块开始
