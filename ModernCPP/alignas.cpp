@@ -48,12 +48,16 @@ void test_alignas()
     uint8_t c;
   };
   /*
-  0---1---4---6---8---9--12
-  | a |pad| b |pad| c |pad|
+  在align块内部仍会进行对齐，以align块内部的最大成员进行对齐
+  0---1---2---4---5---8
+  | a |pad| b | c |pad|
   */
 
   std::cout << sizeof(Info2) << std::endl;   // 8  4 + 4
   std::cout << alignof(Info2) << std::endl;  // 4
+  std::cout << offsetof(Info2, a) << std::endl; // 0
+  std::cout << offsetof(Info2, b) << std::endl; // 2
+  std::cout << offsetof(Info2, c) << std::endl; // 4
 
   return;
 }
